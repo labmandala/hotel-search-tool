@@ -1,4 +1,5 @@
 import React from "react";
+import Hotel from "./Hotel.js";
 
 const renderHotel = () => null;
 
