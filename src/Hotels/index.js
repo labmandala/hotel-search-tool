@@ -7,11 +7,8 @@ const HotelsList = (props) => {
   if (!props.hotels) {
     return null;
   }
-
-  // In HotelsList functional component, map over the hotels prop to call
-  // the renderHotel callback function for each hotel in the hotels array
-  props.hotels.map(renderHotel)
-  return <ul className="hotels-list">{}</ul>;
+  const hotelListElements = props.hotels.map(renderHotel);
+  return <ul className="hotels-list">{hotelListElements}</ul>;
 };
 
 export default HotelsList;
