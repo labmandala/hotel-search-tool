@@ -1,42 +1,17 @@
-export const filterData = [
-  {
-    id: 21,
-    name: "Free Cancellation",
-    matchCount: 307
-  },
-  {
-    id: 22,
-    name: "Breakfast Included",
-    matchCount: 175
-  },
-  {
-    id: 23,
-    name: "Bestsellers",
-    matchCount: 20
-  },
-  {
-    id: 41,
-    name: "Parking",
-    matchCount: 272
-  },
-  {
-    id: 42,
-    name: "Pets Allowed",
-    matchCount: 164
-  },
-  {
-    id: 43,
-    name: "Room Service",
-    matchCount: 170
-  },
-  {
-    id: 44,
-    name: "Fitness Center",
-    matchCount: 249
-  }
+/* Notice how we've changed the data model for filters
+to make managing the state of the selected filters and the
+conditional rendering of our hotels easier. */
+export const filterOptions = [
+  { display: "Free Cancellation", key: "hasFreeCancellation" },
+  { display: "Breakfast Included", key: "includesBreakfast" },
+  { display: "Bestsellers", key: "isBestSeller" },
+  { display: "Parking", key: "hasParking" },
+  { display: "Pets Allowed", key: "allowsPets" },
+  { display: "Room Service", key: "hasRoomService" },
+  { display: "Fitness Centre", key: "hasFitnessCenter" }
 ];
 
-export const hotelData = [
+export const hotels = [
   {
     id: 123,
     name: "Ruby International Hotel",
@@ -87,5 +62,39 @@ export const hotelData = [
     allowsPets: false,
     hasRoomService: false,
     hasFitnessCenter: true
+  },
+  {
+    id: 126,
+    name: "JS Plaza Hotel",
+    rating: 7.7,
+    reviewCount: 1519,
+    pricePerNight: 427,
+    imageSrc:
+      "https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2020/11/pexels-pixabay-271619-scaled.jpg",
+    roomsRemaining: 14,
+    hasFreeCancellation: true,
+    includesBreakfast: false,
+    isBestSeller: false,
+    hasParking: false,
+    allowsPets: true,
+    hasRoomService: false,
+    hasFitnessCenter: true
+  },
+  {
+    id: 127,
+    name: "State Street Hotel",
+    rating: 8.5,
+    reviewCount: 1271,
+    pricePerNight: 289,
+    imageSrc:
+      "https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2020/11/pexels-photo-545034.jpeg",
+    roomsRemaining: 8,
+    hasFreeCancellation: true,
+    includesBreakfast: false,
+    isBestSeller: false,
+    hasParking: true,
+    allowsPets: false,
+    hasRoomService: true,
+    hasFitnessCenter: false
   }
 ];

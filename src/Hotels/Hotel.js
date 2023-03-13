@@ -3,10 +3,6 @@ import Perk from "./Perk.js";
 import RoomsLeft from "./RoomsLeft.js";
 import BestsellerFlag from "./BestsellerFlag.js";
 
-/* functional component
-    - accepts the data model for a single hotel as a prop
-    - uses that data to render the UI for a single hotel in the list
-*/
 const Hotel = (props) => (
   <li className="hotel">
     <img
