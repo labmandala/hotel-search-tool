@@ -1,7 +1,7 @@
 /* Notice how we've changed the data model for filters
 to make managing the state of the selected filters and the
 conditional rendering of our hotels easier. */
-export const filterOptions = [
+export var filterOptions = [
   { display: "Free Cancellation", key: "hasFreeCancellation" },
   { display: "Breakfast Included", key: "includesBreakfast" },
   { display: "Bestsellers", key: "isBestSeller" },
@@ -11,7 +11,7 @@ export const filterOptions = [
   { display: "Fitness Centre", key: "hasFitnessCenter" }
 ];
 
-export const hotels = [
+export var hotels = [
   {
     id: 123,
     name: "Ruby International Hotel",

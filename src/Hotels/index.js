@@ -1,22 +1,24 @@
-import React from "react";
-import Hotel from "./Hotel.js";
-import { hotels } from "../data.js";
+import React from 'react';
+import Hotel from './Hotel.js';
+import { hotels } from '../data.js';
 
-const renderHotel = (hotel) => <Hotel key={hotel.id} hotel={hotel} />;
+var renderHotel = hotel => <Hotel key={hotel.id} hotel={hotel} />;
 
-const HotelsList = (props) => {
-  /* see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter to learn how the .filter array method works
-
-  see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every to learn how the .every array method works
-  */
-  const filterCallback = (hotel) => {
-    const everyCallback = (filter) => hotel[filter];
+var HotelsList = props => {
+  var filterCallback = hotel => {
+    var everyCallback = filter => hotel[filter];
     return props.selectedFilters.every(everyCallback);
   };
-  const filteredHotels = hotels.filter(filterCallback);
 
-  const hotelListElements = filteredHotels.map(renderHotel);
-  return <ul className="hotels-list">{hotelListElements}</ul>;
+  var filteredHotels = hotels.filter(filterCallback);
+
+  /* check out this cool sort method that we get for free with all JavaScript arrays: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort */
+  var sortCallback = (hotelA, hotelB) =>
+    hotelB[props.sortBy] - hotelA[props.sortBy];
+  var sortedHotels = filteredHotels.sort(sortCallback);
+
+  var hotelListElements = sortedHotels.map(renderHotel);
+  return <ul className='hotels-list'>{hotelListElements}</ul>;
 };
 
 export default HotelsList;

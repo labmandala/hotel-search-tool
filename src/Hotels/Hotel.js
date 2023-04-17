@@ -3,7 +3,7 @@ import Perk from "./Perk.js";
 import RoomsLeft from "./RoomsLeft.js";
 import BestsellerFlag from "./BestsellerFlag.js";
 
-const Hotel = (props) => (
+var Hotel = props => (
   <li className="hotel">
     <img
       src={props.hotel.imageSrc}

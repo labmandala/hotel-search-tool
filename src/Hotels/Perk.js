@@ -1,6 +1,6 @@
 import React from "react";
 
-const Perk = (props) => {
+var Perk = props => {
   if (props.hasPerk) {
     return <span className="hotel__perks">{props.perk}</span>;
   } else {
