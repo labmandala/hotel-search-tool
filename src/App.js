@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Hotels from "./Hotels";
 import Filters from "./Filters";
+import Sort from "./Sort.js";
 
 class App extends Component {
   state = { selectedFilters: [] };
